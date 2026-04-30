@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVCO TECH | Inovação • Dados • Automação</title>
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --accent-lime: #ccff00;
+            --text-light: #e6f1ff;
+            --slate-gray: #8892b0;
+        }
+
+        body {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(204, 255, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--accent-lime);
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: var(--accent-lime);
+        }
+
+        .hero p {
+            color: var(--slate-gray);
+            max-width: 600px;
+            font-size: 1.2rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 10%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-lime);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .cta-button {
+            background: transparent;
+            color: var(--accent-lime);
+            border: 2px solid var(--accent-lime);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-lime);
+            color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <!-- Use a logo que geramos aqui -->
+            <span class="logo-text">DVCO TECH</span>
+        </div>
+        <nav>
+            <a href="mailto:contato@dvcotech.com.br" class="cta-button" style="padding: 8px 15px; font-size: 0.9rem;">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Inovação em <span>Dados</span></h1>
+        <p>Transformamos informações brutas em decisões estratégicas através de BI, automação de processos e desenvolvimento sob medida.</p>
+        <a href="#servicos" class="cta-button">Conheça Nossas Soluções</a>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="card">
+            <h3>📊 BI & Analytics</h3>
+            <p>Dashboards interativos e análise preditiva para o crescimento do seu negócio.</p>
+        </div>
+        <div class="card">
+            <h3>🤖 Automação</h3>
+            <p>Bots inteligentes e fluxos automatizados com Docker e integração de APIs.</p>
+        </div>
+        <div class="card">
+            <h3>🌐 Dev Web</h3>
+            <p>Sites e sistemas robustos, como os cases E.E. Gabriela Lobo e Espaço Prado.</p>
+        </div>
+    </section>
+
+</body>
+</html>
