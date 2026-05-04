@@ -9,12 +9,13 @@
 
 <style>
 :root{
-    --bg:#06141f;
+    --bg:#040d14;
     --card:#0b2233;
     --cyan:#00e5ff;
     --cyan-soft:#00bcd4;
     --text:#e8f6ff;
     --muted:#7aa6c2;
+    --header-bg: rgba(4, 13, 20, 0.7);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
@@ -25,38 +26,53 @@ body{
     scroll-behavior:smooth;
 }
 
-/* HEADER */
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    padding:14px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(6,20,31,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom:1px solid rgba(0,229,255,0.15);
-    z-index:1000;
+/* HEADER TURBINADO */
+header {
+    position: fixed;
+    width: 90%; /* Deixa o header flutuando */
+    max-width: 1200px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-bg);
+    backdrop-filter: blur(15px); /* Efeito vidro */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 50px; /* Bordas arredondadas modernas */
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
 }
 
-.logo img{
-    height:58px;
+header:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
 }
 
-nav a{
-    color:var(--cyan);
-    text-decoration:none;
-    border:1px solid var(--cyan);
-    padding:8px 18px;
-    border-radius:8px;
-    transition:.3s;
-    font-weight:600;
+.logo img {
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.3));
 }
-nav a:hover{
-    background:var(--cyan);
-    color:#001018;
-    box-shadow:0 0 15px var(--cyan);
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--cyan-soft), var(--cyan));
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #001018;
+}
+
+nav a:hover {
+    box-shadow: 0 0 20px var(--cyan);
+    transform: scale(1.05);
 }
 
 /* HERO */
@@ -74,6 +90,7 @@ nav a:hover{
     font-size:3.4rem;
     margin-bottom:20px;
     text-shadow:0 0 18px rgba(0,229,255,0.4);
+    line-height: 1.2;
 }
 
 .hero span{
@@ -160,12 +177,6 @@ input,select,textarea{
     font-size:1rem;
 }
 
-input:focus,textarea:focus,select:focus{
-    outline:none;
-    border:1px solid var(--cyan);
-    box-shadow:0 0 10px rgba(0,229,255,0.3);
-}
-
 /* FOOTER */
 footer{
     padding:30px;
@@ -176,8 +187,9 @@ footer{
 
 /* RESPONSIVO */
 @media(max-width:768px){
+    header { width: 95%; padding: 10px 20px; }
     .hero h1{font-size:2.3rem;}
-    .logo img{height:48px;}
+    .logo img{height:40px;}
 }
 </style>
 </head>
@@ -189,12 +201,12 @@ footer{
         <img src="logo.png.png" alt="DVCO Tech Logo">
     </div>
     <nav>
-        <a href="#contato">Contato</a>
+        <a href="#contato">Solicitar Orçamento</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Transformamos <span>Dados</span> em <span>Performance</span></h1>
+    <h1>Transformamos <span>Dados</span> em <br><span>Performance</span></h1>
     <p>Automação, Business Intelligence e soluções digitais para empresas que querem escalar com tecnologia de verdade.</p>
     <a href="#contato" class="btn">Fale Conosco</a>
 </section>
@@ -236,7 +248,7 @@ footer{
 </section>
 
 <footer>
-    © 2026 DVCO TECH — Dados, Automação e Performance.
+    © 2026 DVCO TECH — Michel Jorge • Dados, Automação e Performance.
 </footer>
 
 </body>
